@@ -1,59 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Catriel Kahla">
-        <meta name="description"
-            content="Un sitio web donde podrás encontrar artículos y secciones en las que hayarás información de los diferentes temas y ámbitos.">
-        <meta name="keywords"
-            content="kiwi, artículos, secciones, información, kiwisite, programación, javascript, css, html, Catriel, Kahla">
-        <link rel="icon" href="images/ico.png">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="lib/bootstrap.min.js"></script>
-        <title>Kiwi-site | Inicio</title>
-    </head>
-<body class="indexBody">
-    <main class="intro">
-
-
-        <!--        Inicio registro         -->
-		<img class="sec1__imgkw" src="images/image2.png" alt="kiwi">
-		<div class="firstdiv">
-			<label class="form__txt">Usuario:</label><br>
-			<input class="form__box" type="text" name="" id="user"><br>
-			<label class="form__txt" for="">Contraseña:</label><br>
-			<input class="form__box" type="password" name="" id="password"><br>
-		</div>
-        <span>
-            <input class="but" type="button" id="signIn" value="Iniciar">
-			<a href="pages/register.html"><input class="but" type="button" id="signUp" value="Registrarse"></a>
-        </span>
-        <!--        Fin registro         -->
-
-        
-        <article class="article__user" id="articleUser">
-            <img src="images/userIco.png" alt="user"><p id="userTextt"></p>
-        </article>
-        <span id="userInfo" class="artUser__out">
-            <div class="userInfo">
-                <a href="pages/userInfo.html"><p>Editar perfil</p></a><hr>
-                <p id="logOut">Cerrar sesión</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwi-Site | index</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <aside>
+        <div>
+            <div class="div__item">
+                <img src="images/bread.png" alt="bread">
+                <label id="breadStock">x0</label>
             </div>
-        </span>
-        <article class="article__links" id="articleLinks">
-            <a href="https://twitter.com/SiteKiwi"><img class="footer__img" src="images/twitter.png" alt="twitter"></a>
-			<a href="https://instagram.com/kiwisite_"><img id="instaLogo" class="footer__img" src="images/instagram.png" alt="instagram"></a>
-        </article>
-        <a href="pages/kiwiResto.html" class="article__aResto"><article class="article__resto" id="articleResto">
-            <img src="images/restaurante.png" alt="resto" class="p__restoIco">
-            <p>Kiwi-Food</p>
-		    
-        </article></a>
-        
-	</main>
+            <div class="div__item">
+                <img src="images/apple.png" alt="apple">
+                <label id="appleStock">x0</label>
+            </div>
+        </div>
+        <label id="cash">$0</label>
+    </aside>
 
-    <script src="lib/sweetalert.min.js"></script>
-	<script src="js/index.js"></script>
+    
+    <aside class="aside-2" id="askCustomer">
+        <label class="pedido">Pedido</label>
+        <div>
+            <div class="div__item">
+                <img src="images/bread.png" alt="bread">
+                <label id="breadAsk">x0</label>
+            </div>
+            <div class="div__item">
+                <img src="images/apple.png" alt="apple">
+                <label id="appleAsk">x0</label>
+            </div>
+        </div>
+    </aside>
+
+    <aside class="aside-3">
+        <label>Acciones</label>
+        <button class="div__item" id="foodNormal"><img src="images/bread.png" alt="bread"><img src="images/apple.png" alt="apple"></button>
+        <button class="div__item" id="breadOf"><img src="images/bread.png" alt="bread"> Ofertar</button>
+        <button class="div__item" id="appleOf"><img src="images/apple.png" alt="apple"> Ofertar</button>
+        <button class="div__item" id="breadIn"><img src="images/bread.png" alt="bread"> Aumentar</button>
+        <button class="div__item" id="appleIn"><img src="images/apple.png" alt="apple"> Aumentar</button>
+    </aside>
+
+    <aside class="aside-3 aside-4">
+        <label>Desbloquear</label>
+        <button class="div__item" id="aBreadOf"><img src="images/bread.png" alt="bread"> Ofertar ($500)</button>
+        <button class="div__item" id="aAppleOf"><img src="images/apple.png" alt="apple"> Ofertar ($750)</button>
+        <button class="div__item" id="aBreadIn"><img src="images/bread.png" alt="bread"> Aumentar ($750)</button>
+        <button class="div__item" id="aAppleIn"><img src="images/apple.png" alt="apple"> Aumentar ($1000)</button>
+        <button class="div__item" id="aBreadStockIn"><img src="images/bread.png" alt="bread"> Aumentar Stock ($1000)</button>
+        <button class="div__item" id="aAppleStockIn"><img src="images/apple.png" alt="apple"> Aumentar Stock ($1000)</button>
+    </aside>
+
+    <main>
+        <article id="breadSign">
+            <div id="breadSignD">
+                <img src="images/bread.png" alt="bread">
+            </div>
+            <button id="breadBut">
+                Preparar
+            </button>
+        </article>
+        <article id="appleSign">
+            <div id="appleSignD">
+                <img src="images/apple.png" alt="apple">
+            </div>
+            <button id="appleBut">
+                Preparar
+            </button>
+        </article>
+    </main>
+    <footer>
+        <button id="vender">
+            Vender
+        </button>
+        <label>v0.2</label>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
