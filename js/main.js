@@ -11,6 +11,14 @@ let breadCustomer = 0;
 let fullAppleStock = 20;
 let fullBreadStock = 20;
 
+let sound1 = new Audio();
+sound1.src = "sounds/Blackberry-SMS.mp3";
+
+let sound2 = new Audio();
+sound2.src = "sounds/explosion-bang_1635134169.mp3";
+
+let sound3 = new Audio();
+sound3.src = "sounds/pacman-come-cereza_1635131044.mp3";
 
 //awards = [ofertar, aumentar]
 
@@ -41,6 +49,7 @@ let foods = [
 function sell(){
     readyToSell();
     if(ready == false){
+        sound2.play();
         alert("Keep working");
     }else{
         money = money + breadCustomer*(foods[0].price+foods[0].increase-foods[0].offer);
@@ -168,6 +177,7 @@ ask();
 document.getElementById("foodNormal").addEventListener('click', () => {
     foodNormal();
     ask();
+    sound3.play();
 });
 
 document.getElementById("breadOf").addEventListener('click', () => {
@@ -178,6 +188,7 @@ document.getElementById("breadOf").addEventListener('click', () => {
         document.getElementById("foodNormal").style.backgroundColor = "rgba(127, 255, 212, 0.288)";
         document.getElementById("breadIn").style.backgroundColor = "rgba(127, 255, 212, 0.288)";
         ask();
+        sound3.play();
     }else{alert("Requiere compra del elemento");}
 });
 
@@ -189,6 +200,7 @@ document.getElementById("breadIn").addEventListener('click', () => {
         document.getElementById("foodNormal").style.backgroundColor = "rgba(127, 255, 212, 0.288)";
         document.getElementById("breadIn").style.backgroundColor = "rgba(145, 255, 163, 0.966)";
         ask();
+        sound3.play();
     }else{alert("Requiere compra del elemento");}
 });
 
@@ -200,6 +212,7 @@ document.getElementById("appleOf").addEventListener('click', () => {
         document.getElementById("foodNormal").style.backgroundColor = "rgba(127, 255, 212, 0.288)";
         document.getElementById("appleOf").style.backgroundColor = "rgba(145, 255, 163, 0.966)";
         ask();
+        sound3.play();
     }else{alert("Requiere compra del elemento");}
 });
 
@@ -211,6 +224,7 @@ document.getElementById("appleIn").addEventListener('click', () => {
         document.getElementById("foodNormal").style.backgroundColor = "rgba(127, 255, 212, 0.288)";
         document.getElementById("appleIn").style.backgroundColor = "rgba(145, 255, 163, 0.966)";
         ask();
+        sound3.play();
     }else{alert("Requiere compra del elemento");}
 });
 
@@ -222,7 +236,11 @@ document.getElementById("aBreadOf").addEventListener('click', () => {
         document.getElementById("aBreadOf").style.display="none";
         breadAwards[0] = true;
         document.getElementById("cash").innerHTML = "$" + money;
-    }else{alert("Dinero insuficiente");}
+        sound1.play();
+    }else{
+        sound2.play();
+        alert("Dinero insuficiente");
+    }
 });
 
 document.getElementById("aAppleOf").addEventListener('click', () => {
@@ -231,7 +249,11 @@ document.getElementById("aAppleOf").addEventListener('click', () => {
         document.getElementById("aAppleOf").style.display="none";
         appleAwards[0] = true;
         document.getElementById("cash").innerHTML = "$" + money;
-    }else{alert("Dinero insuficiente");}
+        sound1.play();
+    }else{
+        sound2.play();
+        alert("Dinero insuficiente");
+    }
 });
 
 document.getElementById("aBreadIn").addEventListener('click', () => {
@@ -240,7 +262,11 @@ document.getElementById("aBreadIn").addEventListener('click', () => {
         document.getElementById("aBreadIn").style.display="none";
         breadAwards[1] = true;
         document.getElementById("cash").innerHTML = "$" + money;
-    }else{alert("Dinero insuficiente");}
+        sound1.play();
+    }else{
+        sound2.play();
+        alert("Dinero insuficiente");
+    }
 });
 
 document.getElementById("aAppleIn").addEventListener('click', () => {
@@ -249,7 +275,11 @@ document.getElementById("aAppleIn").addEventListener('click', () => {
         document.getElementById("aAppleIn").style.display="none";
         appleAwards[1] = true;
         document.getElementById("cash").innerHTML = "$" + money;
-    }else{alert("Dinero insuficiente");}
+        sound1.play();
+    }else{
+        sound2.play();
+        alert("Dinero insuficiente");
+    }
 });
 
 document.getElementById("aBreadStockIn").addEventListener('click', () => {
@@ -258,8 +288,12 @@ document.getElementById("aBreadStockIn").addEventListener('click', () => {
         document.getElementById("aBreadStockIn").style.display="none";
         foods[0].stockLimit = 30;
         document.getElementById("cash").innerHTML = "$" + money;
+        sound1.play();
         foodLeft();
-    }else{alert("Dinero insuficiente");}
+    }else{
+        sound2.play();
+        alert("Dinero insuficiente");
+    }
 });
 
 document.getElementById("aAppleStockIn").addEventListener('click', () => {
@@ -268,7 +302,11 @@ document.getElementById("aAppleStockIn").addEventListener('click', () => {
         document.getElementById("aAppleStockIn").style.display="none";
         foods[1].stockLimit = 30;
         document.getElementById("cash").innerHTML = "$" + money;
+        sound1.play();
         foodLeft();
-    }else{alert("Dinero insuficiente");}
+    }else{
+        sound2.play();
+        alert("Dinero insuficiente");
+    }
 });
 
