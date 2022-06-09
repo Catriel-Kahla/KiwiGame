@@ -109,18 +109,20 @@ footer {
   aside {
     position: absolute;
     height: 8em;
-    width: 12em;
+    width: 46vw;
     right: 0.5em; }
   .aside-2 {
     left: 0.5em; }
   .aside-3 {
-    width: 12em;
     position: absolute;
     top: 78vh;
-    left: 0.5em; }
+    left: 0.5em;
+    height: 55vh; }
   .aside-4 {
     right: 0.5em;
     left: auto; }
+  article {
+    width: 48vw; }
   body {
     height: auto;
-    padding-bottom: 23em; } }
+    padding-bottom: 63vh; } }
