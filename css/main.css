@@ -8,17 +8,16 @@
 
 main {
   width: 50vw;
-  height: 80vh;
-  margin-top: 10vh;
-  margin: 5vh 25vw 0 25vw;
+  height: 65vh;
+  margin: 15vh 25vw 0 25vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center; }
 
 aside {
-  height: 8em;
-  width: 12em;
+  height: 4.5em;
+  width: 24em;
   background-color: rgba(250, 235, 215, 0.329);
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.548);
@@ -36,7 +35,7 @@ aside {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 10em; }
+    width: 23em; }
   aside .div__item {
     width: auto; }
     aside .div__item img {
@@ -52,7 +51,8 @@ aside {
   left: 1em;
   top: auto;
   bottom: 1em;
-  height: 20em; }
+  height: 20em;
+  width: 12em; }
   .aside-3 button {
     border: hidden;
     background-color: rgba(127, 255, 212, 0.288);
@@ -88,6 +88,8 @@ article {
     border-radius: 5px;
     padding: 0.2em 1.3em;
     background-color: rgba(127, 255, 212, 0.288); }
+    article button img {
+      height: 1.2em; }
 
 footer {
   display: flex;
@@ -101,28 +103,40 @@ footer {
     padding: 0.2em 1.3em;
     background-color: rgba(250, 235, 215, 0.596); }
 
+.locked__but {
+  background-color: rgba(255, 0, 0, 0.438); }
+
+.locked-unlock {
+  display: none; }
+
 @media screen and (max-width: 1200px) {
   main {
     margin: 23vh 0 0 0;
     width: 100vw;
-    height: 40vh; }
+    height: 80vh; }
   aside {
     position: absolute;
     height: 8em;
     width: 46vw;
     right: 0.5em; }
+    aside div {
+      width: 38vw; }
   .aside-2 {
     left: 0.5em; }
   .aside-3 {
     position: absolute;
-    top: 78vh;
-    left: 0.5em;
-    height: 55vh; }
+    top: 120vh;
+    left: 16vw;
+    height: 55vh;
+    width: 68vw; }
+    .aside-3 label {
+      font-size: 1.5em; }
   .aside-4 {
-    right: 0.5em;
-    left: auto; }
+    top: 180vh; }
   article {
     width: 48vw; }
+    article div {
+      width: 43vw; }
   body {
     height: auto;
-    padding-bottom: 63vh; } }
+    padding-bottom: 125vh; } }

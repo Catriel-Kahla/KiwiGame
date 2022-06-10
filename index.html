@@ -12,6 +12,7 @@
 <body class="body">
     <aside>
         <div>
+            <label id="cash">$0</label>
             <div class="div__item">
                 <img src="images/bread.png" alt="bread">
                 <label id="breadStock">x0</label>
@@ -20,10 +21,20 @@
                 <img src="images/apple.png" alt="apple">
                 <label id="appleStock">x0</label>
             </div>
+            <div class="div__item">
+                <img src="images/carrot.png" alt="carrot">
+                <label id="carrotStock">x0</label>
+            </div>
+            <div class="div__item">
+                <img src="images/pumpkin.png" alt="apple">
+                <label id="pumpkinStock">x0</label>
+            </div>
+            <div class="div__item">
+                <img src="images/pumpkin_pie.png" alt="apple">
+                <label id="pumpkinPieStock">x0</label>
+            </div>
         </div>
-        <label id="cash">$0</label>
     </aside>
-
     
     <aside class="aside-2" id="askCustomer">
         <label class="pedido">Pedido</label>
@@ -38,8 +49,6 @@
             </div>
         </div>
     </aside>
-
-    
 
     <main>
         <article id="breadSign">
@@ -58,12 +67,43 @@
                 Preparar
             </button>
         </article>
+        <article id="carrotSign">
+            <div id="carrotSignD">
+                <img src="images/carrot.png" alt="carrot">
+            </div>
+            <button class="locked__but" id="firstLockedBut">
+                Unlock
+            </button>
+            <button class="locked-unlock" id="carrotBut">
+                Preparar
+            </button>
+        </article>
+        <article id="pumpkinSign">
+            <div id="pumpkinSignD">
+                <img src="images/pumpkin.png" alt="">
+            </div>
+            <button class="locked__but" id="secondLockedBut">
+                Unlock
+            </button>
+            <button class="locked-unlock" id="pumpkinBut">
+                Preparar
+            </button>
+        </article>
+        <article id="pumpkinPieSign">
+            <div id="pumpkinPieSignD">
+                <img src="images/pumpkin_pie.png" alt="">
+            </div>
+            <button id="pumpkinPieBut">
+                Preparar (<img src="images/pumpkin.png" alt="pumpkin">x2)
+            </button>
+        </article>
     </main>
+
     <footer>
         <button id="vender">
             Vender
         </button>
-        <label>v0.5</label>
+        <label>v0.6</label>
     </footer>
 
     <aside class="aside-3">
@@ -85,5 +125,6 @@
         <button class="div__item" id="aAppleStockIn"><img src="images/apple.png" alt="apple"> Aumentar Stock ($1000)</button>
     </aside>
     <script src="js/main.js"></script>
+    <script src="js/sweetalert.min.js"></script>
 </body>
 </html>
