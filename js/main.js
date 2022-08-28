@@ -80,6 +80,26 @@ let foods = [
 
 let pumpkinPieLimit = false;
 
+
+let level = {
+    name: "testing",
+    cash: 0,
+    bread: 0,
+    apple: 0,
+    carrot: 0,
+    pumpkin: 0,
+    pumpkinPie: 0,
+    unlockedLevel: 0,
+    appleItemStock: false,
+    appleItemPrice: false,
+    appleItemOffer: false,
+    breadItemStock: false,
+    breadItemPrice: false,
+    breadItemOffer: false,
+
+}
+
+
 //functions
 
 function sell(){
@@ -270,6 +290,24 @@ function readyToSell(){
     ((appleStock>=appleCustomer) && (breadStock>=breadCustomer)) ? ready=true : ready=false;
     ((carrotStock>=carrotCustomer) && (ready==true)) ? ready=true : ready=false;
     ((pumpkinPieStock>=pumpkinPieCustomer) && (ready==true)) ? ready=true : ready=false;
+}
+
+function closeLockedItems(){
+    document.getElementById("lockedItemsShop").style.display = "none";
+    document.getElementById("shop").style.display = "flex";
+}
+function openLockedItems(){
+    document.getElementById("lockedItemsShop").style.display = "flex";
+    document.getElementById("shop").style.display = "none";
+}
+
+function closeUnlockedItems(){
+    document.getElementById("unlockedItems").style.display = "none";
+    document.getElementById("itemsMod").style.display = "flex";
+}
+function openUnlockedItems(){
+    document.getElementById("unlockedItems").style.display = "flex";
+    document.getElementById("itemsMod").style.display = "none";
 }
 
 //funtion acctions
@@ -508,4 +546,22 @@ document.getElementById("secondLockedBut").addEventListener('click', () => {
         document.getElementById("pumpkinBut").style.display="flex";
         document.getElementById("secondLockedBut").style.display="none";
     }
+});
+
+//close windows
+
+document.getElementById("closeBut").addEventListener('click', () => {
+    closeLockedItems()
+});
+
+document.getElementById("shop").addEventListener('click', () => {
+    openLockedItems()
+});
+
+document.getElementById("closeButD").addEventListener('click', () => {
+    closeUnlockedItems()
+});
+
+document.getElementById("itemsMod").addEventListener('click', () => {
+    openUnlockedItems()
 });
