@@ -143,7 +143,7 @@ function createWheatB() {
 function createWheatC() {
     let wheatTimer = Math.round(Math.random() * (10 - 4) + 4) * 1000;
     setTimeout(() => {
-        document.getElementById("wheatSeedC").src = "/images/wheat_plant.png";
+        document.getElementById("wheatSeedC").src = "../images/wheat_plant.png";
     }, wheatTimer);
 }
 
