@@ -10,6 +10,12 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body class="body">
+    <img src="images/house.png" alt="" class="backgr backgr-2">
+    <img src="images/grass.png" alt=""class="backgr">
+    <img src="images/me.png" alt=""class="backgr me">
+    <img src="images/p0.png" alt=""class="backgr person" id="custo">
+    <a href="pages/garden.html"><img src="images/flech.png" alt=""class="backgr flech" id="next"></a>
+
     <aside>
         <div>
             <label id="cash">$0</label>
@@ -24,10 +30,6 @@
             <div class="div__item">
                 <img src="images/carrot.png" alt="carrot">
                 <label id="carrotStock">x0</label>
-            </div>
-            <div class="div__item">
-                <img src="images/pumpkin.png" alt="apple">
-                <label id="pumpkinStock">x0</label>
             </div>
             <div class="div__item">
                 <img src="images/pumpkin_pie.png" alt="apple">
@@ -51,59 +53,16 @@
     </aside>
 
     <main>
-        <article id="breadSign">
-            <div id="breadSignD">
-                <img src="images/bread.png" alt="bread">
-            </div>
-            <button id="breadBut">
-                Preparar
+        <div class="main-f">
+            <button id="vender">
+                Vender
             </button>
-        </article>
-        <article id="appleSign">
-            <div id="appleSignD">
-                <img src="images/apple.png" alt="apple">
-            </div>
-            <button id="appleBut">
-                Preparar
-            </button>
-        </article>
-        <article id="carrotSign">
-            <div id="carrotSignD">
-                <img src="images/carrot.png" alt="carrot">
-            </div>
-            <button class="locked__but" id="firstLockedBut">
-                Unlock
-            </button>
-            <button class="locked-unlock" id="carrotBut">
-                Preparar
-            </button>
-        </article>
-        <article id="pumpkinSign">
-            <div id="pumpkinSignD">
-                <img src="images/pumpkin.png" alt="">
-            </div>
-            <button class="locked__but" id="secondLockedBut">
-                Unlock
-            </button>
-            <button class="locked-unlock" id="pumpkinBut">
-                Preparar
-            </button>
-        </article>
-        <article id="pumpkinPieSign">
-            <div id="pumpkinPieSignD">
-                <img src="images/pumpkin_pie.png" alt="">
-            </div>
-            <button id="pumpkinPieBut">
-                Preparar (<img src="images/pumpkin.png" alt="pumpkin">x2)
-            </button>
-        </article>
+            <label>v0.8</label>
+        </div>
     </main>
 
     <footer>
-        <button id="vender">
-            Vender
-        </button>
-        <label>v0.7</label>
+        
     </footer>
 
     <img src="images/itemsMod.png" alt="itemsMod" class="shop itemsMod" id="itemsMod">
