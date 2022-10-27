@@ -12,7 +12,7 @@
 
 .backgr-2 {
   right: 0;
-  z-index: 1; }
+  z-index: 4; }
 
 .backgr-3 {
   right: 70px;
@@ -20,17 +20,45 @@
   height: 23em;
   z-index: 1; }
 
+.clouds {
+  right: 480px;
+  bottom: 500px;
+  z-index: 7; }
+
+.pumpkinF {
+  right: 560px;
+  bottom: 520px;
+  height: 80px;
+  z-index: 6;
+  animation: none;
+  cursor: pointer; }
+
+.carrotPot {
+  right: 378px;
+  bottom: 240px;
+  height: 32px;
+  z-index: 4; }
+
+.carrotPlant {
+  right: 390px;
+  bottom: 208px;
+  height: 50px;
+  rotate: -50deg;
+  z-index: 3;
+  animation: none;
+  cursor: pointer; }
+
 .me {
   right: 70px;
   bottom: 250px;
   height: 195px;
-  z-index: 2; }
+  z-index: 5; }
 
 .person {
   right: 250px;
   bottom: 250px;
   height: 140px;
-  z-index: 2;
+  z-index: 5;
   animation: none;
   transform: 2; }
 
@@ -38,7 +66,7 @@
   height: 5em;
   bottom: 400px;
   right: 10px;
-  z-index: 2;
+  z-index: 6;
   padding: .5em;
   border-radius: 5px;
   background-color: rgba(240, 248, 255, 0.212);
@@ -181,7 +209,7 @@ article {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  z-index: 4; }
+  z-index: 5; }
   .main-f button {
     font-size: 1.2em;
     border-radius: 5px;
@@ -210,6 +238,18 @@ article {
   100% {
     opacity: 0%; } }
 
+@keyframes falling {
+  0% {
+    bottom: 520px; }
+  100% {
+    bottom: 240px; } }
+
+@keyframes flying {
+  0% {
+    bottom: 208px; }
+  100% {
+    bottom: 260px; } }
+
 .appleTrees {
   display: inline-block;
   position: absolute;
@@ -223,23 +263,28 @@ article {
   bottom: 240px; }
 
 #wheatSeed {
-  left: 180px; }
+  left: 180px;
+  cursor: pointer; }
 
 #wheatSeedB {
-  left: 260px; }
+  left: 260px;
+  cursor: pointer; }
 
 #wheatSeedC {
-  left: 340px; }
+  left: 340px;
+  cursor: pointer; }
 
 #appleTree {
   right: 250px;
   bottom: 520px;
-  height: 3em; }
+  height: 3em;
+  cursor: pointer; }
 
 #appleTreeB {
   right: 160px;
   bottom: 440px;
-  height: 3em; }
+  height: 3em;
+  cursor: pointer; }
 
 @media screen and (max-width: 1200px) {
   main {
