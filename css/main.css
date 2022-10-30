@@ -20,6 +20,48 @@
   height: 23em;
   z-index: 1; }
 
+.hoe {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 30%;
+  align-items: center;
+  z-index: 7;
+  bottom: 250px;
+  left: 470px;
+  background-color: rgba(240, 248, 255, 0.651);
+  animation: jumping 2s infinite;
+  cursor: pointer; }
+  .hoe img {
+    height: 50px; }
+
+.missionB {
+  display: none;
+  left: auto;
+  right: 370px;
+  bottom: 280px; }
+  .missionB .img_img {
+    position: absolute;
+    height: 20px;
+    top: 20px;
+    left: 17px;
+    opacity: 75%; }
+
+.missionC {
+  display: none;
+  left: auto;
+  right: 570px;
+  bottom: 380px; }
+  .missionC .img_img {
+    position: absolute;
+    height: 20px;
+    top: 20px;
+    left: 17px;
+    opacity: 75%; }
+
 .clouds {
   right: 480px;
   bottom: 500px;
@@ -215,6 +257,10 @@ article {
     border-radius: 5px;
     padding: 0.2em 1.3em;
     background-color: rgba(250, 235, 215, 0.596); }
+  .main-f label {
+    background-color: rgba(187, 121, 0, 0.342);
+    padding: 0.1em 1em;
+    border-radius: 10%; }
 
 .locked__but {
   background-color: rgba(255, 0, 0, 0.438); }
@@ -250,6 +296,14 @@ article {
   100% {
     bottom: 260px; } }
 
+@keyframes jumping {
+  0% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
+
 .appleTrees {
   display: inline-block;
   position: absolute;
@@ -260,19 +314,25 @@ article {
   position: absolute;
   z-index: 7;
   height: 5em;
-  bottom: 240px; }
+  bottom: 240px;
+  cursor: pointer; }
 
 #wheatSeed {
-  left: 180px;
-  cursor: pointer; }
+  left: 180px; }
 
 #wheatSeedB {
-  left: 260px;
-  cursor: pointer; }
+  left: 260px; }
 
 #wheatSeedC {
-  left: 340px;
-  cursor: pointer; }
+  left: 340px; }
+
+#wheatSeedD {
+  display: none;
+  left: 420px; }
+
+#wheatSeedE {
+  display: none;
+  left: 500px; }
 
 #appleTree {
   right: 250px;
